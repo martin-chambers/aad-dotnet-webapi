@@ -122,7 +122,7 @@ namespace TodoListWebApp.Controllers
                 // The user needs to re-authorize.  Show them a message to that effect.
                 //
                 TodoItem newItem = new TodoItem();
-                newItem.Title = "(Sign-in required to view to do list.)";
+                newItem.Title = "(Sign-in required to view to do list.): " + ee.Message;
                 itemList.Add(newItem);
                 ViewBag.ErrorMessage = "AuthorizationRequired";
                 return View(itemList);
